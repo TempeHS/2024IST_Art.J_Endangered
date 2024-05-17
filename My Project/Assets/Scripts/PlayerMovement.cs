@@ -6,13 +6,13 @@ public class PlayerMovement : MonoBehaviour
 {
     private float horizontal;
     private float speed = 12f;
-    private float jumpingPower = 22f;
+    private float jumpingPower = 20f;
     private bool isFacingRight = true;
 
     private float coyoteTime = 0.1f;
     private float coyoteTimeCounter;
 
-    private float jumpBufferTime = 0.1f;
+    private float jumpBufferTime = 0.05f;
     private float jumpBufferCounter;
 
     [SerializeField] private Rigidbody2D rb;
