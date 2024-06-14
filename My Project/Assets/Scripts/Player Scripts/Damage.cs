@@ -13,7 +13,7 @@ public class Damage : MonoBehaviour
 
     void Update()
     {
-        
+
     }
 
     void OnCollisionEnter2D(Collision2D other)
