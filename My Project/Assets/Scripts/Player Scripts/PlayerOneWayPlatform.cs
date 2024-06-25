@@ -8,7 +8,6 @@ public class PlayerOneWayPlatform : MonoBehaviour
 
     [SerializeField] private BoxCollider2D playerCollider;
 
-    // Update is called once per frame
     void Update()
     {
         if (Input.GetKeyDown(KeyCode.S) || Input.GetKeyDown(KeyCode.DownArrow))
