@@ -2104,6 +2104,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4ad82d108e6be94439a5d0db8d0ab7dc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _trailRenderer: {fileID: 1818586136}
+  _dashingVelocity: 14
+  _dashingTime: 0.5
   rb: {fileID: 1818586128}
   groundCheck: {fileID: 516056428}
   groundLayer:
@@ -2121,7 +2124,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 82bfb505c2998794f8dad1739201d242, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  playerCollider: {fileID: 0}
+  playerCollider: {fileID: 1818586135}
 --- !u!114 &1818586134
 MonoBehaviour:
   m_ObjectHideFlags: 0
