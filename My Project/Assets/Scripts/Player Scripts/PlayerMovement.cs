@@ -2,22 +2,12 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-
-
 public class PlayerMovement : MonoBehaviour
 {
     private float horizontal;
     private float speed = 12f;
     private float jumpingPower = 20f;
     private bool isFacingRight = true;
-    private TrailRenderer _trailRenderer;
-
-    [Header("Dashing")]
-    [SerializeField] private float _dashingVelocity = 14f;
-    [SerializeField] private float _dashingTime = 0.5f;
-    private Vector2 _dashingDir;
-    private bool _isDashing;
-    private bool _canDash = true;
 
     private float coyoteTime = 0.1f;
     private float coyoteTimeCounter;
@@ -33,32 +23,7 @@ public class PlayerMovement : MonoBehaviour
     private void Update()
     {
         horizontal = Input.GetAxisRaw("Horizontal");
-        var dashInput = Input.GetButtonDown("Dash");
 
-        if (dashInput && _canDash)
-        {
-            _isDashing = true;
-            _canDash = false;
-            _trailRenderer.emitting = true;
-            _dashingDir = new Vector2(Input.GetAxisRaw("Horizontal"), Input.GetAxisRaw("Vertical"));
-
-
-
-            StartCoroutine(StopDashing());
-        }
-
-        if (_isDashing)
-        {
-            GetComponent<Rigidbody>().velocity = _dashingDir.normalized * _dashingVelocity;
-            return;
-        }
-
-        if (IsGrounded())
-        {
-            _canDash = true;
-        }
-
-        //Coyote Time and Jump Buffering
         if (IsGrounded())
         {
             coyoteTimeCounter = coyoteTime;
@@ -99,20 +64,12 @@ public class PlayerMovement : MonoBehaviour
     {
         rb.velocity = new Vector2(horizontal * speed, rb.velocity.y);
     }
-
-    private IEnumerator StopDashing()
-    {
-        yield return new WaitForSeconds(_dashingTime);
-        _trailRenderer.emitting = false;
-        _isDashing = false;
-    }
     
     private bool IsGrounded()
     {
         return Physics2D.OverlapCircle(groundCheck.position, 0.2f, groundLayer);
     }
 
-    //Flip
     private void Flip()
     {
         if (isFacingRight && horizontal < 0f || !isFacingRight && horizontal > 0f)
