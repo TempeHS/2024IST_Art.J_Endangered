@@ -10,7 +10,7 @@ public class PlayerMovement : MonoBehaviour
     private float speed = 12f;
     private float jumpingPower = 20f;
     private bool isFacingRight = true;
-    [SerializeField] private TrailRenderer _trailRenderer;
+    private TrailRenderer _trailRenderer;
 
     [Header("Dashing")]
     [SerializeField] private float _dashingVelocity = 14f;
@@ -33,19 +33,23 @@ public class PlayerMovement : MonoBehaviour
     private void Update()
     {
         horizontal = Input.GetAxisRaw("Horizontal");
+        var dashInput = Input.GetButtonDown("Dash");
 
-        if (Input.GetButtonDown("Dash") && _canDash)
+        if (dashInput && _canDash)
         {
             _isDashing = true;
             _canDash = false;
             _trailRenderer.emitting = true;
             _dashingDir = new Vector2(Input.GetAxisRaw("Horizontal"), Input.GetAxisRaw("Vertical"));
+
+
+
             StartCoroutine(StopDashing());
         }
 
         if (_isDashing)
         {
-            GetComponent<Rigidbody2D>().velocity = _dashingDir.normalized * _dashingVelocity;
+            GetComponent<Rigidbody>().velocity = _dashingDir.normalized * _dashingVelocity;
             return;
         }
 
