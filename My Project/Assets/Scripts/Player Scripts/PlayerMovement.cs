@@ -12,12 +12,6 @@ public class PlayerMovement : MonoBehaviour
     private float coyoteTime = 0.1f;
     private float coyoteTimeCounter;
 
-    private bool canDash = true;
-    private bool isDashing;
-    private float dashingPower = 28f;
-    private float dashingTime = 0.25f;
-    private float dashingCooldown = 0.5f;
-
     private float jumpBufferTime = 0.05f;
     private float jumpBufferCounter;
 
@@ -29,11 +23,6 @@ public class PlayerMovement : MonoBehaviour
     // Update is called once per frame
     private void Update()
     {
-        if (isDashing)
-        {
-            return;
-        }
-
         horizontal = Input.GetAxisRaw("Horizontal");
 
         if (IsGrounded())
@@ -67,22 +56,11 @@ public class PlayerMovement : MonoBehaviour
 
             coyoteTimeCounter = 0f;
         }
-
-        if (Input.GetKeyDown(KeyCode.LeftShift) && canDash)
-        {
-            StartCoroutine(Dash());
-        }
-
         Flip();
     }
 
     private void FixedUpdate()
     {
-        if (isDashing)
-        {
-            return;
-        }
-
         rb.velocity = new Vector2(horizontal * speed, rb.velocity.y);
     }
     
@@ -100,21 +78,5 @@ public class PlayerMovement : MonoBehaviour
             localScale.x *= -1f;
             transform.localScale = localScale;
         }
-    }
-
-    private IEnumerator Dash()
-    {
-        canDash = false;
-        isDashing = true;
-        float originalGravity = rb.gravityScale;
-        rb.gravityScale = 0f;
-        rb.velocity = new Vector2(transform.localScale.x * dashingPower, 0f);
-        tr.emitting = true;
-        yield return new WaitForSeconds(dashingTime);
-        tr.emitting = false;
-        rb.gravityScale = originalGravity;
-        isDashing = false;
-        yield return new WaitForSeconds(dashingCooldown);
-        canDash = true;
     }
 }
