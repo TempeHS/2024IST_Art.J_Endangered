@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 2696441140616884476}
   - component: {fileID: 5587323024968658103}
   m_Layer: 0
-  m_Name: Grass
+  m_Name: Tiles
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -41,7 +41,7 @@ Grid:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1887557111293661398}
   m_Enabled: 1
-  m_CellSize: {x: 0.32, y: 0.32, z: 0}
+  m_CellSize: {x: 1, y: 1, z: 0}
   m_CellGap: {x: 0, y: 0, z: 0}
   m_CellLayout: 0
   m_CellSwizzle: 0
@@ -137,6 +137,8 @@ Tilemap:
     m_Data: {fileID: 11400000, guid: ceb2311642c7fe247a6dce1192297fad, type: 2}
   - m_RefCount: 1
     m_Data: {fileID: 11400000, guid: e1f09dc846644a2419db48aecab95f76, type: 2}
+  - m_RefCount: 0
+    m_Data: {fileID: 0}
   m_TileSpriteArray:
   - m_RefCount: 1
     m_Data: {fileID: 1407801344, guid: dc1258c94a40d484da74c7978dc945cc, type: 3}
@@ -146,6 +148,8 @@ Tilemap:
     m_Data: {fileID: -1433199592, guid: dc1258c94a40d484da74c7978dc945cc, type: 3}
   - m_RefCount: 1
     m_Data: {fileID: 1243715975, guid: dc1258c94a40d484da74c7978dc945cc, type: 3}
+  - m_RefCount: 0
+    m_Data: {fileID: 0}
   m_TileMatrixArray:
   - m_RefCount: 4
     m_Data:
@@ -168,11 +172,13 @@ Tilemap:
   m_TileColorArray:
   - m_RefCount: 4
     m_Data: {r: 1, g: 1, b: 1, a: 1}
+  - m_RefCount: 0
+    m_Data: {r: NaN, g: NaN, b: NaN, a: NaN}
   m_TileObjectToInstantiateArray: []
   m_AnimationFrameRate: 1
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_Origin: {x: -3, y: 0, z: 0}
-  m_Size: {x: 2, y: 2, z: 1}
+  m_Size: {x: 3, y: 2, z: 1}
   m_TileAnchor: {x: 0.5, y: 0.5, z: 0}
   m_TileOrientation: 0
   m_TileOrientationMatrix:
@@ -241,7 +247,7 @@ TilemapRenderer:
   m_Mode: 0
   m_DetectChunkCullingBounds: 0
   m_MaskInteraction: 0
---- !u!114 &3843166528684625189
+--- !u!114 &6115843996140654241
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
