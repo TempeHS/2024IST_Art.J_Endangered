@@ -528,7 +528,7 @@ GameObject:
   m_Component:
   - component: {fileID: 183888565}
   m_Layer: 0
-  m_Name: One Way Platforms
+  m_Name: One Way Platforms Parent
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1524,7 +1524,7 @@ GameObject:
   m_Component:
   - component: {fileID: 699984493}
   m_Layer: 0
-  m_Name: Platforms
+  m_Name: Platforms Parent
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -6017,7 +6017,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1465285476}
   m_Layer: 0
-  m_Name: Falling Platforms
+  m_Name: Falling Platforms Parent
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
