@@ -21,6 +21,27 @@ public class PlayerMovement : MonoBehaviour
     private bool _isGrounded;
     private bool _bumpedHead;
 
+    //jump vars
+    public float VerticalVelocity { get; private set; }
+    private bool _isJumping;
+    private bool _isFastFalling;
+    private bool _isFalling;
+    private float _fastFallTime;
+    private float _fastFallReleaseSpeed;
+    private int _numberOfJumpsUsed;
+
+    //apex vars
+    private float _apexPoint;
+    private float _timePastApexThreshold;
+    private bool _isPastApexThreshold;
+
+    //jump buffer vars
+    private float _jumpBufferTimer;
+    private float _ jumpReleasedDuringBuffer;
+
+    //coyote time vars
+    private float _coyoteTimer;
+    
     private void Awake()
     {
         _isFacingRight = true;
@@ -28,9 +49,16 @@ public class PlayerMovement : MonoBehaviour
         _rb = GetComponent<Rigidbody2D>();
     }
 
+    private void update()
+    {
+        CountTimers();
+        JumpChecks();
+    }
+
     private void FixedUpdate()
     {
         CollisionChecks();
+        Jump;
 
         if (_isGrounded)
         {
@@ -94,6 +122,28 @@ public class PlayerMovement : MonoBehaviour
 
     #endregion
 
+    #region Jump
+
+    private void JumpChecks()
+    {
+        //WHEN WE PRESS THE JUMP BUTTON
+
+        //WHEN WE RELEASE THE JUMP BUTTON
+
+        //INITIATE JUMP WITH JUMP BUFFERING AND COYOTE TIME
+
+        //AIR JUMP AFTER COYOTE TIME LAPSED
+
+        //LANDED
+    }
+
+    private void Jump()
+    {
+
+    }
+
+    #endregion
+
     #region Collision Checks
 
     private void IsGrounded()
@@ -112,6 +162,21 @@ public class PlayerMovement : MonoBehaviour
     private void CollisionChecks()
     {
         IsGrounded();
+    }
+
+    #endregion
+
+    #region Timers
+
+    private void CountTimers()
+    {
+        _jumpBufferTimer -= Time.deltaTime;
+
+        if (!_isGrounded)
+        {
+            _coyoteTimer -= Time.deltaTime;
+        }
+        else { _coyoteTimer = MoveStats.JumpCoyoteTime; }
     }
 
     #endregion
