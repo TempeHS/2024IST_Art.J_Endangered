@@ -37,7 +37,7 @@ public class PlayerMovement : MonoBehaviour
 
     //jump buffer vars
     private float _jumpBufferTimer;
-    private float _ jumpReleasedDuringBuffer;
+    private float _jumpReleasedDuringBuffer;
 
     //coyote time vars
     private float _coyoteTimer;
