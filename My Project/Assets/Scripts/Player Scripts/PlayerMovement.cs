@@ -127,19 +127,145 @@ public class PlayerMovement : MonoBehaviour
     private void JumpChecks()
     {
         //WHEN WE PRESS THE JUMP BUTTON
+        if (InputManager.JumpWasPressed)
+        {
+            _jumpBufferTimer = MoveStats.JumpBufferTime;
+            _jumpReleasedDuringBuffer = false;
+        }
 
         //WHEN WE RELEASE THE JUMP BUTTON
+        if (InputManager.JumpWasReleased)
+        {
+            if (_jumpBufferTimer > 0f)
+            {
+                _jumpReleasedDuringBuffer = true;
+            }
+
+            if (_isJumping && VerticalVelocity > 0f)
+            {
+                if (_isPastApexThreshold)
+                {
+                    _isPastApexThreshold = false;
+                    _isFastFalling = true;
+                    _fastFallTime = MoveStats.TimeForUpwardsCancel;
+                    VerticalVelocity > 0f;
+                }
+                else
+                {
+                    _isFastFalling = true;
+                    _fastFallReleaseSpeed = VerticalVelocity;
+                }
+            }
+        }
 
         //INITIATE JUMP WITH JUMP BUFFERING AND COYOTE TIME
+        if (_jumpBufferTimer > 0f && !_isJumping && (_isGrounded || _coyoteTimer > 0f))
+        {
+            InitiateJump(1);
+
+            if (_jumpReleasedDuringBuffer)
+            {
+                _isFastFalling = true;
+                _fastFallReleaseSpeed = VerticalVelocity;
+            }
+        }
 
         //AIR JUMP AFTER COYOTE TIME LAPSED
+        else if (_jumpBufferTimer > 0f && _isFalling && _numberOfJumpsUsed < MoveStats.NumberOfJumpsAllowed)
+        {
+            InitiateJump(2);
+            _isFastFalling = false;
+        }
 
         //LANDED
+        if ((_isJumping || _isFalling) && _isGrounded && VerticalVelocity <= 0f)
+        {
+            _isJumping = false;
+            _isFalling = false;
+            _isFastFalling = false;
+            _fastFallTime = 0f;
+            _isPastApexThreshold = false;
+            _numberOfJumpsUsed = 0;
+
+            VerticalVelocity = Physics2D.gravity.y;
+        }
+    }
+
+    private void InitiateJump(int numberOfJumpsUsed)
+    {
+        if(!_isJumping)
+        {
+            _isJumping = true;
+        }
+
+        _jumpBufferTimer = 0f;
+        _numberOfJumpsUsed += numberOfJumpsUsed;
+        VerticalVelocity = MoveStats.InitialJumpVelocity;
     }
 
     private void Jump()
     {
+        //APPLY GRAVITY WHILE JUMPING
+        if (_isJumping)
+        {
+            //CHECK FOR HEAD BUMP
+            if (_bumpedHead)
+            {
+                _isFastFalling = true;
+            }
 
+        //GRAVITY ON ASCENDING
+        if (VerticalVelocity >= 0f)
+        {
+            //APEX CONTROLS
+            _apexPoint = Mathf.InverseLerp(MoveStats.InitialJumpVelocity, 0f, VerticalVelocity);
+
+            if (_apexPoint > MoveStats.ApexThreshold)
+            {
+                if (!_isPastApexThreshold)
+                {
+                    _isPastApexThreshold = true;
+                    _timePastApexThreshold = 0f;
+                }
+
+                IsGrounded (_isPastApexThreshold)
+                {
+                    _timePastApexThreshold += Time.fixedDeltaTime;
+                    if (_timePastApexThreshold < MoveStats.ApexHangTime)
+                    {
+                        VerticalVelocity = 0f;
+                    }
+                    else
+                    {
+                        VerticalVelocity = -0.01f;
+                    }
+                }
+            }
+
+            //GRAVITY ON DESCENDING BUT NOT PAST APEX THRESHOLD
+            else
+            {
+                VerticalVelocity += MoveStats.Gravity * Time.fixedDeltaTime;
+                if (_isPastApexThreshold)
+                {
+                    _isPastApexThreshold = false;
+                }
+            }
+        }
+
+        //GRAVITY ON DESCENDING
+        else if (!_isFastFalling)
+        {
+            VerticalVelocity += MoveStats.Gravity * MoveStats.GravityOnReleaseMultiplier * Time.fixedDeltaTime;
+        }
+
+    }
+
+        //JUMP CUT
+
+        //NORMAL GRAVITY WHILE FALLING
+
+        //CLAMP FALL SPEED
     }
 
     #endregion
