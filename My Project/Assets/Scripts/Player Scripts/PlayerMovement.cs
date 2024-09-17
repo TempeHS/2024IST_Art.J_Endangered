@@ -228,7 +228,7 @@ public class PlayerMovement : MonoBehaviour
                     _timePastApexThreshold = 0f;
                 }
 
-                IsGrounded (_isPastApexThreshold)
+                if (_isPastApexThreshold)
                 {
                     _timePastApexThreshold += Time.fixedDeltaTime;
                     if (_timePastApexThreshold < MoveStats.ApexHangTime)
