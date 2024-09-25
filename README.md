@@ -28,9 +28,9 @@ yadayada
 
 # Documentation
 
-A little explination on how I made the game and the skills I aquired.
+A little explanation on how I made the game and the skills I aquired.
 
 # Collaboration
 
-Hughie Mckinnon the multimedia partner<p>
+Hughie Mckinnon<p>
 [add media examples]<p>
