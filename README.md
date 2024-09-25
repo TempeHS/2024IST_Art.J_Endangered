@@ -32,8 +32,5 @@ A little explination on how I made the game and the skills I aquired.
 
 # Collaboration
 
-Kano the multimedia partner<p>
+Hughie Mckinnon the multimedia partner<p>
 [add media examples]<p>
-![Player Idle](https://github.com/user-attachments/assets/e9d64654-7ff7-4e5b-aad5-d7c79dcb1a5f)<p>
-![slidefin](https://github.com/user-attachments/assets/5c1dc78a-c110-4f4a-ae55-3783037bfea0)<p>
-![paint bucket collectable](https://github.com/user-attachments/assets/27b6e5fe-d5b0-4e90-a0ab-f856d4df2a20)<p>
