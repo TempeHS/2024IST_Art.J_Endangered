@@ -17,7 +17,7 @@ yadayada
 
 # Walkthrough
 
-(https://github.com/user-attachments/assets/7e66d7f1-30c7-449a-8b0a-31897dd9dbd8)
+https://github.com/user-attachments/assets/7e66d7f1-30c7-449a-8b0a-31897dd9dbd8
 
 # Tutorials
 
