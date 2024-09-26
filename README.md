@@ -23,9 +23,9 @@ https://github.com/user-attachments/assets/7e66d7f1-30c7-449a-8b0a-31897dd9dbd8
 
 # Documentation
 
-This document outlines the skills and techniques integrated into the development of Endangered, a 2D platformer featuring hyper-intelligent endangered animals. The project has significantly contributed to my development as a game developer, particularly in game design principles and programming.
+In developing Endangered, a 2D platformer featuring hyper-intelligent endangered animals, I focused on integrating a variety of skills and techniques. This project has significantly contributed to my growth as a game developer, particularly in the areas of game design principles and programming.
 
-I gained proficiency in C#, which was essential for scripting gameplay mechanics such as character movement, enemy AI behaviour, and collision detection. My familiarity with Unity enabled efficient game development and management of assets, streamlining the entire process.
+I gained proficiency in C#, which was essential for scripting gameplay mechanics such as character movement, damage & respawning, and collision detection. My familiarity with Unity enabled efficient game development and management of assets, streamlining the entire process.
 
 Collaboration was another key aspect of this project; I worked closely with Hughie M. to create cohesive visuals, learning the importance of effective communication within a team.
 
