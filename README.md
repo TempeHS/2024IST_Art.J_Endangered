@@ -1,5 +1,4 @@
 <h1 align="center">
- <img src="https://github.com/user-attachments/assets/c136b420-4c3c-40e5-869f-14f43d27db7e" | width=500>
   <br />
  2024IST_Art.J_
 </h1>
