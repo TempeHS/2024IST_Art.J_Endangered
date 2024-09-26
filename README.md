@@ -5,15 +5,10 @@
 
 # Table of Contents
 
-1. [Overview](https://github.com/TempeHS/2024IST_Art.J_?tab=readme-ov-file#overview)
-2. [Walkthrough](https://github.com/TempeHS/2024IST_Art.J_?tab=readme-ov-file#walkthrough)
-3. [Tutorials](https://github.com/TempeHS/2024IST_Art.J_?tab=readme-ov-file#tutorials)
-4. [Documentation](https://github.com/TempeHS/2024IST_Art.J_?tab=readme-ov-file#documentation)
-5. [Collaboration](https://github.com/TempeHS/2024IST_Art.J_?tab=readme-ov-file#collaboration)
-
-# Overview
-
-yadayada
+1. [Walkthrough](https://github.com/TempeHS/2024IST_Art.J_?tab=readme-ov-file#walkthrough)
+2. [Tutorials](https://github.com/TempeHS/2024IST_Art.J_?tab=readme-ov-file#tutorials)
+3. [Documentation](https://github.com/TempeHS/2024IST_Art.J_?tab=readme-ov-file#documentation)
+4. [Collaboration](https://github.com/TempeHS/2024IST_Art.J_?tab=readme-ov-file#collaboration)
 
 # Walkthrough
 
