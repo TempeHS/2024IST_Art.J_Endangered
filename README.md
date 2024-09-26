@@ -31,6 +31,10 @@ Collaboration was another key aspect of this project; I worked closely with Hugh
 
 Overall, the development of Endangered has provided invaluable experience in various aspects of game design and programming. The skills I acquired will significantly contribute to my growth in the industry and make me a strong candidate for future employment opportunities.
 
+Tutorials Used:
+
+[![Bendux Unity 2D Movement Tutorial]()](https://youtu.be/K1xZ-rycYY8?si=SFiM36x-4zX41UTR)
+
 # Collaboration
 
 Hughie M.<p>
