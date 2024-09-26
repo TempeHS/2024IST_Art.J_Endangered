@@ -33,7 +33,8 @@ Overall, the development of Endangered has provided invaluable experience in var
 
 Tutorials Used:
 
-[![Bendux Unity 2D Movement Tutorial]()](https://youtu.be/K1xZ-rycYY8?si=SFiM36x-4zX41UTR)
+[![Bendux Unity 2D Movement Tutorial](<img width="1440" alt="Screenshot 2024-09-27 at 3 39 19 am" src="https://github.com/user-attachments/assets/01231d90-4024-4e5b-992c-cde70e4c0d77">)](https://youtu.be/K1xZ-rycYY8?si=SFiM36x-4zX41UTR)
+
 
 # Collaboration
 
