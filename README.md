@@ -35,6 +35,15 @@ Tutorials Used:
 
 [Bendux Unity 2D Movement Tutorial](https://youtu.be/K1xZ-rycYY8?si=SFiM36x-4zX41UTR)
 
+[Bendux Unity 2D Falling Platforms Tutorial](https://youtu.be/uzbMPEkkSmo?si=u0oVfE4XJohEHQIg)
+
+[Bendux Unity 2D Coyote Time & Jump Buffering Tutorial](https://youtu.be/RFix_Kg2Di0?si=sD4Hv2ATsFvDJXBi)
+
+[Bendux Unity 2D One-Way Platforms Tutorial](https://youtu.be/7rCUt6mqqE8?si=RKiRMOIYqrmwYjyA)
+
+[Bendux Unity 2D Smooth Camera Following Tutorial](https://youtu.be/ZBj3LBA2vUY?si=OL4goY_C6oM8M0zm)
+
+[Bendux Unity 2D Dash Tutorial](https://youtu.be/2kFGmuPHiA0?si=1fFoD20a2veGtxLQ)
 
 # Collaboration
 
