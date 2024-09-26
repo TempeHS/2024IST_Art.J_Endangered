@@ -23,6 +23,9 @@ https://github.com/user-attachments/assets/7e66d7f1-30c7-449a-8b0a-31897dd9dbd8
 
 ![The control scheme of my game for an xbox controller](https://github.com/user-attachments/assets/9d09c65f-24d2-4789-90e9-47b714064592)
 
+![The control scheme of my game for a keyboard](https://github.com/user-attachments/assets/e908d160-d194-4cc1-b4e0-dc2cca1c28bb)
+
+
 # Documentation
 
 A little explanation on how I made the game and the skills I aquired.
