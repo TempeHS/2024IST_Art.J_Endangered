@@ -33,4 +33,7 @@ A little explanation on how I made the game and the skills I aquired.
 # Collaboration
 
 Hughie Mckinnon<p>
-[add media examples]<p>
+![dirt_generic](https://github.com/user-attachments/assets/4b3c6e3c-bdcb-49e2-af15-010e7ca36436)
+![grass_generic](https://github.com/user-attachments/assets/6101c9a4-e73f-4592-8be5-755708f914de)
+![stone_generic](https://github.com/user-attachments/assets/eaecaa43-d469-4307-8dbb-81fc8fbbd9e0)
+![ice_generic](https://github.com/user-attachments/assets/695da640-b0c6-4853-9645-3785d5e8b270)
